@@ -1,0 +1,31 @@
+PROJECT TITLE
+Clock Synchronization in Distributed Systems Using the Berkeley Algorithm
+
+OBJECTIVE
+To simulate how a coordinator synchronizes the clocks of multiple distributed nodes that initially have different clock times.
+
+PROBLEM STATEMENT
+Clocks on distributed computers may differ because of clock drift and hardware differences. Applications may need a common time reference. This project demonstrates a simplified clock synchronization process using a coordinator and multiple simulated nodes.
+
+TOOLS AND TECHNOLOGIES
+Python, Streamlit, Pandas, Matplotlib.
+
+METHODOLOGY
+1. Create multiple simulated clock nodes with configurable offsets.
+2. Select one node as coordinator.
+3. Collect the clock offsets from all nodes.
+4. Calculate the average offset.
+5. Calculate a correction for each node.
+6. Apply the corrections in the simulation.
+7. Display the final synchronized clocks and a before/after chart.
+
+FORMULA
+Average offset = Sum of all node offsets / Number of nodes
+Correction for node i = Average offset - Offset of node i
+Final offset = Initial offset + Correction
+
+EXPECTED RESULT
+The simulated nodes converge to the same final clock value after the coordinator calculates and applies the corrections.
+
+LIMITATIONS
+This is an educational simulation. It does not change the host computer's system clock and does not model network latency, node failures, or clock drift.
